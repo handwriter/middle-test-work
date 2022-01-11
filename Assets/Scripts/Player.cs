@@ -29,7 +29,8 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 5000));
+            //GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 5000));
+            GetComponent<Rigidbody2D>().velocity = Vector3.up * 3.5f;
             GetComponent<Animator>().Rebind();
         }
     }
