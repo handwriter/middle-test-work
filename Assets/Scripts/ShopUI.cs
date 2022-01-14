@@ -20,10 +20,10 @@ public class ShopUI : MonoBehaviour
 
     public void onUpgradeBtn()
     {
-        if (Model.money >= 3)
+        if (Model.money >= Model.level + 1)
         {
             Model.level += 1;
-            Model.money -= 3;
+            Model.money -= Model.level + 1;
             updateValues();
         }
     }
